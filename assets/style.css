@@ -1,0 +1,166 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Réduction du padding pour diminuer la hauteur */
+    background-color: black;
+    color: white;
+    width: 100vw;
+}
+
+.logo h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px; /* Taille réduite du logo */
+    margin: 0;
+    color: #f76c5e;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f76c5e;
+}
+
+/* Navbar verticale */
+.navbar {
+    width: 250px;
+    position: fixed;
+    top: 49px;
+    left: 0;
+    background-color: black;
+    height: 100%;
+    padding-top: 60px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #1abc9c;
+}
+
+/* Styles pour les formulaires */
+.form-container {
+    margin-left: 250px; 
+    padding: 20px;
+}
+
+.form {
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.form h2 {
+    margin-top: 0;
+    text-align: center;
+    color: black;
+}
+
+.form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.form button {
+    padding: 10px 20px;
+    background-color: #f76c5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.form button:hover {
+    background-color: #ff8567;
+}
+
+
+
+.radio-group {
+    display: flex; 
+    gap: 50px; 
+    align-items: center; 
+}
+
+button {
+    display: block;
+    margin: 20px auto; 
+}
+
+#repartition {
+    width: 20%;
+}
+table{
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    overflow-x: auto;
+}

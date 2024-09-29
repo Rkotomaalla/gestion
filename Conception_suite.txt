@@ -1,0 +1,60 @@
+
+Affichage:
+    -Formulaire d'insertion Rubrique:
+            .INPUT (type=text,name=nom_rubrique)
+            .INPUT(type=radiobutton, name=unite_doeuvre)
+            .BUTTON (Submit)
+    
+    -formulaire d'insertion charge
+            .INPUT (type:select,nom=idRubrique)
+            .INPUT (type=radiobutton, name=nature(fixe ou varialbe))
+=            .INPUT (type=radioButton,name=idcorporable)
+            .INPUT (type:number,name=unite)
+            .INPUT (type:decimal,montant)
+            .INPUT(type=date,nom=date)
+            SUBMIT
+    
+    -Formulaire d'insertion REPARTITION d'un rubrique
+            .INPUT (type=number) X pour chaque repartion
+        2--===========================================================
+    -formulaire insertion recherche cout de revient produits(ilay jus) 
+            .INPUT (type=date,nom=datedebut)
+            .INPUT(type=date,nom=datefin)
+            Submit
+
+
+<== otrn ilay sectin pratique an ilay EXCEL nomer'i Mr
+    -affichage tableau liste de charges entre 2 dates:
+            .rubrique/montant/unite d'oeuvre / nature / (asiana par repartition(oh:admin/usine)[%;Fixe;Variable])/total[fixe et variable]
+            .(ligne vaovao ambany)
+    -etc...(ao @ excel)
+==>
+
+
+_______________________________________________________________________________________________________________________________________________________________________________       
+Metier:
+        -creation fonction insertRubrique
+        -creation fonction insertCharge
+        2--============================================================
+        -cretion fonction getAllCharge(dateDebut,dataFin)
+        -fonction mamoaka ny tableau mitovy amin ilay tableau faha-2 am le excel
+        -fonction calcul cout de l unite du jus(quantite du fruit,total coup par repartition)
+_______________________________________________________________________________________________________________________________________________________________________________       
+
+Base:
+                
+             table nature(id/nom)
+             table unite_oeuvre(id/nom)
+             table rubrique (id/nom/id_unite_oeuvre)
+             table charge(id/id_rubrique/id_nature/unite(ny isany)/montant/date)
+             table repartition (id/nom)
+             table charge_repartition(id/id_charge/id_repartition)
+
+
+
+
+
+
+
+
+

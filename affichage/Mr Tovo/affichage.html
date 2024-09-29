@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires</title>
+    
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; /* Réduction du padding pour diminuer la hauteur */
+            background-color: black;
+            color: white;
+        }
+
+        .logo h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 24px; /* Taille réduite du logo */
+            margin: 0;
+            color: #f76c5e;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f76c5e;
+        }
+
+        /* Navbar verticale */
+        .navbar {
+            width: 250px;
+            position: fixed;
+            top: 49px;
+            left: 0;
+            background-color: black;
+            height: 100%;
+            padding-top: 60px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            padding: 10px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Styles pour les formulaires */
+        .form-container {
+            margin-left: 250px; 
+            padding: 20px;
+        }
+
+        .form {
+            background-color: #fff;
+            padding: 70px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .form h2 {
+            margin-top: 0;
+            text-align: center;
+            color: black;
+        }
+
+        .form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .form input[type="text"],
+        .form input[type="number"],
+        .form input[type="date"],
+        .form select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form button {
+            padding: 10px 20px;
+            background-color: #f76c5e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+
+        .form button:hover {
+            background-color: #ff8567;
+        }
+
+        /* Cacher les formulaires par défaut */
+        .hidden {
+            display: none;
+        }
+
+        .radio-group {
+            display: flex; 
+            gap: 50px; 
+            align-items: center; 
+        }
+
+        button {
+            display: block;
+            margin: 20px auto; 
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>FruitDrinks</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Our Juices</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Navbar verticale -->
+    <div>
+    <nav class="navbar">
+        <div>
+        <ul>
+            <li><a href="#" onclick="showForm('rubriqueForm')">Insertion Rubrique</a></li>
+        </ul>
+        </div>
+        <div>
+        <ul>
+            <li><a href="#" onclick="showForm('chargeForm')">Insertion Charge</a></li>
+        </ul>
+        </div>
+    </nav>
+    </div>
+
+    <!-- Conteneur principal pour les formulaires -->
+    <div class="form-container">
+        <!-- Formulaire d'insertion Rubrique -->
+        <form id="rubriqueForm" class="form hidden">
+            <h2>Formulaire d'insertion Rubrique</h2>
+            <label for="nom_rubrique">Nom de la rubrique:</label>
+            <input type="text" id="nom_rubrique" name="nom_rubrique" required><br><br>
+
+            <label>Unité d'œuvre :</label>
+            <div class="radio-group">
+                <label for="unite1">
+                    <input type="radio" id="unite1" name="unite_doeuvre" value="unite1">
+                    Unité 1
+                </label>
+            
+                <label for="unite2">
+                    <input type="radio" id="unite2" name="unite_doeuvre" value="unite2">
+                    Unité 2
+                </label>
+            </div><br><br>
+            <button type="submit">Soumettre</button>
+        </form>
+
+        <!-- Formulaire d'insertion Charge -->
+        <form id="chargeForm" class="form hidden">
+            <h2>Formulaire d'insertion Charge</h2>
+            <label for="idRubrique">Rubrique :</label>
+            <select id="idRubrique" name="idRubrique" required>
+                <option value="rubrique1">Rubrique 1</option>
+                <option value="rubrique2">Rubrique 2</option>
+            </select>
+
+            <label>Nature :</label>
+            <div class="radio-group">       
+                <label for="fixe">
+                    <input type="radio" id="fixe" name="nature" value="fixe">
+                    Fixe
+                </label>        
+                <label for="variable">
+                    <input type="radio" id="variable" name="nature" value="variable">
+                    Variable
+                </label>
+            </div>
+
+            <label for="unite">Unité :</label>
+            <input type="number" id="unite" name="unite" required>
+
+            <label for="montant">Montant :</label>
+            <input type="number" step="0.01" id="montant" name="montant" required>
+
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="repartition">Repartition :</label>
+            <input type="number" id="repartition" name="repartition" required><br><br>
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
+
+    <script>
+        function showForm(formId) {
+            // Cacher tous les formulaires
+            var forms = document.querySelectorAll('.form');
+            forms.forEach(function(form) {
+                form.classList.add('hidden');
+            });
+
+            // Afficher le formulaire sélectionné
+            document.getElementById(formId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

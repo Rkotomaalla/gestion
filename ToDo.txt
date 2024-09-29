@@ -1,0 +1,62 @@
+PROJET SYSTEME ANALYTIQUE:
+
+    Theme: VAROTRA Jus 
+    Techno: php
+    Base: Mysql
+
+    asa:
+        Front: Millenah
+        Back: Tsanta / Toky
+        Integre: Sarobidy  / Kiady
+
+
+ilaina:
+    MATIERE PREMIERE:
+        -matiere
+            .rano
+            .fruit
+            .sucre
+            .emballage
+        
+    USINE:
+        -organisation sanitaire
+        -materiel:
+            .electricite
+            .machine
+            .location entrepot
+            .impots et taxes
+            .assurance
+            .telephone(ccredit)
+            .facture
+        
+        -Employe:
+            .main d'oeuvre:
+                .ouvrier
+                .controlleur
+        -Entretien
+    
+    DISTRIBUTION:
+        -Transport:
+            .location vehicule
+            .carburant
+            .chauffeur
+
+    ADMINISTRATION:
+        -materiel:
+            .bureau
+            .nifstat
+        -Employer:
+            .Gestionnaire
+            .logistique
+
+
+    MAGASIN:
+        -location boutique       
+        -Employe:
+            .vendeur
+            .menage
+        -entretien
+        -materiel:
+            .telephone(ccredit)
+            .facture
+
